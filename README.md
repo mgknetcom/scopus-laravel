@@ -2,8 +2,6 @@
 
 Standalone Laravel 12/13 package for integrating Scopus author profiles, metrics, publications, and authorship suggestions. Filament 5 administration is optional.
 
-Open-source software maintained by [MGK Network](https://github.com/mgknetcom) under the MIT license.
-
 The package provides:
 
 - author metrics through the Author Retrieval API;
