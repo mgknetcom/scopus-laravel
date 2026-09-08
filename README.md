@@ -13,26 +13,10 @@ The package provides:
 - sync history and Filament administration resources;
 - API credentials are read only from environment configuration.
 
-## Installation during local development
-
-Place the package in or next to the host repository and add a path repository:
-
-```json
-{
-    "repositories": [
-        {
-            "type": "path",
-            "url": "./scopus-laravel",
-            "options": { "symlink": true }
-        }
-    ]
-}
-```
-
-Then install and publish its files:
+## Installation
 
 ```bash
-composer require mgknetcom/scopus-laravel:@dev
+composer require mgknetcom/scopus-laravel
 php artisan vendor:publish --tag=scopus-laravel-config
 php artisan vendor:publish --tag=scopus-laravel-migrations
 php artisan migrate
