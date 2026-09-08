@@ -1,0 +1,68 @@
+{
+    "$schema": "https://getcomposer.org/schema.json",
+    "name": "mgknetcom/scopus-laravel",
+    "description": "Reusable Laravel integration for Scopus author metrics and publication suggestions, with optional Filament administration.",
+    "type": "library",
+    "license": "MIT",
+    "homepage": "https://github.com/mgknetcom/scopus-laravel",
+    "authors": [
+        {
+            "name": "MGK Network",
+            "homepage": "https://github.com/mgknetcom"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/mgknetcom/scopus-laravel/issues",
+        "source": "https://github.com/mgknetcom/scopus-laravel"
+    },
+    "keywords": ["laravel", "filament", "scopus", "elsevier", "publications"],
+    "require": {
+        "php": "^8.3",
+        "illuminate/console": "^12.0|^13.0",
+        "illuminate/database": "^12.0|^13.0",
+        "illuminate/http": "^12.0|^13.0",
+        "illuminate/queue": "^12.0|^13.0",
+        "illuminate/support": "^12.0|^13.0"
+    },
+    "require-dev": {
+        "filament/filament": "^5.7",
+        "laravel/pint": "^1.30",
+        "larastan/larastan": "^3.10",
+        "orchestra/testbench": "^10.0|^11.0",
+        "pestphp/pest": "^4.0|^5.0",
+        "pestphp/pest-plugin-laravel": "^4.0|^5.0"
+    },
+    "suggest": {
+        "filament/filament": "Adds the optional Filament 5 administration resources."
+    },
+    "autoload": {
+        "psr-4": {
+            "Mgknetcom\\Scopus\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Mgknetcom\\Scopus\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mgknetcom\\Scopus\\ScopusServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "test": "pest",
+        "stan": "phpstan analyse --memory-limit=1G",
+        "pint": "pint --test"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
